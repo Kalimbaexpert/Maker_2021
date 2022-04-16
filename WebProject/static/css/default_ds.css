@@ -1,0 +1,509 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 리셋초기화 */ 
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {margin: 0;padding: 0; letter-spacing:-1px;}
+
+@import url(/css/nanumgothic.css);
+@import url(/css/nanumgothiccoding.css);
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('NanumGothic.eot');
+    src: url('NanumGothic.woff') format('woff');
+	src: url('NanumGothic.ttf') format('truetype');
+        
+    font-weight: normal;
+    font-style: normal;
+} 
+  
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:inherit;text-decoration:none;font-family:'Nanum Gothic','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;/*font-size:12px;*/}
+table{border-collapse:collapse}
+textarea {font-size:12px;color:#808080;line-height:1.5em;border:1px solid #cbcbcb;background:#fff;}
+input.text {height:26px;font-size:12px;color:#999999;line-height:1.1em;border:1px solid #d6d6d6;background:#fff;}
+button {overflow:visible;margin:0;padding:0;font-size:12px;font-family:'Nanum Gothic','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;line-height:1.1em;letter-spacing:-0.05em;vertical-align:middle;border:0 none;cursor:pointer;}
+button::-moz-focus-inner {padding:0;border:0 none;}
+span {display:inline-block;}
+
+ 
+legend, caption, .blind{position:absolute; left:-9999px; overflow:hidden; text-indent:-9999em; z-index:-1;font-size:0;line-height:0;}
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ 
+/* 기본값 설정 */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%/*화면회전시 폰트 고정할때 none*/; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; color: #222; }
+body { margin: 0; 	padding: 0px; overflow:auto; font-size: 0.750em; line-height: 1.4; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;} 
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input,dl {margin:0px;padding: 0px;}
+h1,h2,h3,h4,h5,h6 {background-color:transparent;}
+input,textarea{font-size: 0.750em;}
+img{border:0; vertical-align:top;}
+ul, ol{list-style:none;}
+label, select, input{vertical-align:middle;}
+a{selector-dummy:expression(this.hideFocus=true);text-decoration:none;}
+ 
+.img_width100{ width:100%; height:auto;} 
+
+
+
+/* style */
+#wrap{  margin:auto; min-width:640; height:100%;} 
+.deploy-sidebar{position:relative;z-index:999;}
+ 
+/*popup*/
+.imagemap{position:relative; width:device-width;}
+.back_link{position:absolute; top:0%; left:33%; width:33%; height:100%;   } 
+
+#headerWrap{z-index:12; width:100%; clear:both; }
+	#header{ background-color:#525252;height:40px; border-bottom:1px solid #2f2f30; position:relative; }
+	#header .logo{z-index:999;height:25px; position:absolute; top:5px;    } 
+	#header .logo a{z-index:999; text-align:center; font-weight:bold; font-size:23px; ; color:White; }
+	#header .live{ height:31px; text-align:right;position:absolute; top:10px; right:9px;}
+	#header .logo2{z-index:999;height:25px; position:absolute; left:35%;top:9px;   } 
+	#header .logo2 a{z-index:999; text-align:center; } 
+	#header .live2{ height:31px; text-align:right;position:absolute; top:10px; right:9px;}
+
+#container{position:relative; top:0;   } 
+.contents{padding:0;top:0; }
+.visualSect { position:relative;padding:0;}
+.visualSect .visualWrap {overflow:hidden}
+.visualSect .visualWrap img {width:100%;} 
+.visualSect div.visualBtn {position:absolute; left:0; bottom:10px; text-align:center; width:100%;}
+.visualSect div.visualBtn a {width:20px; height:20px;display:inline-block; background-size:20px; color:#fb8a04; background-image:url("../image/bg_visual_off.png"); background-position:left top; background-repeat:no-repeat; vertical-align:top; text-align:left}
+.visualSect div.visualBtn a strong {display:none; margin:2px 0 0 4px}
+.visualSect div.visualBtn a.on {color:#fff200; width:50px; padding:0 0 0 18px; background-image:url("../image/bg_visual_on.png")}
+.visualSect div.visualBtn a.on strong {display:block}
+ 
+.quick_menu { margin: 0 auto; } 
+.quick_menu img{width:100%; }  
+.quick_menu table td{position:relative; width:25%;}
+.quick_menu table div{position:absolute; top:10px; left:5px}  
+.quick_menu table h3{color:#f1ee05; font-size:13px; text-shadow: 1px 1px 1px #171717;  }
+.quick_menu span{color:#e8e8e8;}
+/*수정*/ 
+ 
+/* footer */
+#footerwrap{ width:100%; clear:both; margin:0 auto; text-align:center; background-color:#e5e5e5; }  
+#footerwrap .foot_news{  height:150px; text-align:left; padding:10px 0 0 10px; background:url("../image/foot_bg.png") no-repeat right 0; }
+#footerwrap .foot_news li{ width:200px; padding-bottom:5px;} 
+#footerwrap .foot_news li a:link { text-decoration: none; color: #4f4f4f; } 
+#footerwrap .foot_news li a:visited { text-decoration: none; color: #4f4f4f;} 
+#footerwrap .foot_news li a:hover { text-decoration: none; color: #4f4f4f;} 
+#footerwrap .foot_news li a:active { text-decoration: none; color: #4f4f4f;} 
+#footerwrap .foot_news .line_news{height:2px; background:url("../image/line_news.png") repeat-x; }
+#footerwrap .copy{font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; background-color:#e8f2f6;   line-height:150%; text-shadow: 2px 2px 2px #ffffff; } 
+#footerwrap .copy p{ font-size:12px; color:#666666; padding:7px 0 8px 0; text-decoration:none;}
+#footerwrap .copy .icon_btn{padding-top:20px; padding-bottom:20px;border:0px;}
+#footerwrap .copy .icon_btn a{ text-decoration:none; font-size:12px; color:#777; padding:2px}
+#footerwrap .copy .icon_btn a img{ padding-right:2px}
+/* footer E */
+ 
+/* sub */
+
+#article{padding:0; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic';  }
+
+#Subheader{ background:url("../image/sub_top_bg.jpg") repeat-x; width:100%; height:54px; border-bottom:1px solid #d0d0d0; position:relative;  }
+.btn_back{ width:21px; position:absolute; top:9px; left:10px; z-index:100; line-height:26px; text-align:left;}
+.btn_back a{ direction:none;}
+.btn_back img{ max-height:22px; float:left;}
+.btn_back span{ font-size:1.4em; font-weight:bold; letter-spacing:-2px; color:#999; padding:0 0 0 5px; }
+
+.btn_logout{ width:55px; position:absolute; top:9px; right:10px; z-index:100; line-height:26px; text-align:right;}
+.btn_logout a{ direction:none;}
+.btn_logout img{ max-height:22px; float:right;}
+.btn_logout span{ font-size:1.4em; font-weight:bold; letter-spacing:-2px; color:#999; padding:0 0 0 5px; }
+
+#Subheader .btn_next{ width:61px; height:51px;text-align:right; position:absolute; top:17px;  right:10px;}
+#Subheader .btn_next img{max-height:51px;} 
+.sub_title{ width:100%; height:31px; text-align:center; position:absolute; top:15px; }
+ .sub_title img{ max-height:25px; margin-left:10px;}
+ 
+ /* gnb */	
+	#gnb {display:block; position:relative; padding-top:49px;background:url('../image/gnb_bg.png') repeat-x 0 0; font-size:100%;   }
+	#gnb li {width:100%; }
+	#gnb li a {display:block; position:absolute;top:12px;width:25%; height:33px; font-size:18px;color:#fff;text-align:center;padding:1px 0 11px;
+		background-image:url('../image/gnb_line.png'); background-position:right 0;background-repeat:no-repeat;  
+		line-height:1.1em;letter-spacing:-0.08em;text-decoration:none; }  
+		
+	
+
+	#gnb2 {display:block; position:relative; padding-top:49px;background:url('../image/gnb_bg.png') repeat-x 0 0; font-size:100%;   }
+	#gnb2 li {width:100%; }
+	#gnb2 li a {display:block; position:absolute;top:12px;width:100%; height:33px; font-size:18px;color:#fff;text-align:center;padding:1px 0 11px;
+		  background-position:right 0;background-repeat:no-repeat;  
+		line-height:1.1em;letter-spacing:-0.08em;text-decoration:none; } 
+
+
+	
+	
+	#gnb li.gnb_01.on { margin-bottom:2px;}
+	#gnb li.gnb_02.on { margin-bottom:2px; }
+	#gnb li.gnb_03.on { margin-bottom:2px;}
+	#gnb li.gnb_04.on { margin-bottom:2px;}
+	
+	#gnb li.gnb_01 a {left:0;}
+	#gnb li.gnb_02 a {left:25%;}
+	#gnb li.gnb_03 a {left:50%;}
+	#gnb li.gnb_04 a {left:75%; background-image:none;} 
+	#gnb li.on a { color:#f7f40f;background-image:url('../image/bul_1depth.gif'); background-position:50% 100%, 100% 100%;background-repeat:no-repeat;}
+	/*#gnb li.gnb_04.on a {background:url('/images/bullet/mobile/bul_1depth.gif') #1c3b65 no-repeat 50% 100%;}*/
+
+	#gnb li.on ul.depth2 {display:block;}	
+	#gnb ul.depth2 {display:none;position:relative; top:-3px; width:100%; height:30px; background:#fafafa;}
+	#gnb ul.depth2 li {float:left; height:35px;}             
+	#gnb ul.depth2 li a {display:block;position:relative; top:1px;left:0; width:auto; height:35px; padding-top:8px;padding-left:15px;font-weight:bold;font-size:15px;color:#696868;text-align:left; 
+		border-bottom:1px solid #d3d2d2; border-right:1px solid #d3d2d2;
+		background:url('../image/bul_2depth.gif') no-repeat 89% 42%;
+		background:url('../image/bul_2depth.gif') no-repeat 89% 42%,-webkit-gradient(linear,left top, left bottom,color-stop(0,#ffffff),color-stop(1,#f3f3f3));
+		background:url('../image/bul_2depth.gif') no-repeat 89% 42%,-moz-linear-gradient(top,#ffffff,#f3f3f3);
+		filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f3f3f3', GradientType=0);
+	}
+	#gnb ul.depth2 li.focus a {color:#000;
+		background:url('../image/bul_2depth_on.gif') no-repeat 89% 42%;
+		background:url('../image/bul_2depth_on.gif') no-repeat 89% 42%,-webkit-gradient(linear,left top, left bottom,color-stop(0,#ffffff),color-stop(1,#f3f3f3));
+		background:url('../image/bul_2depth_on.gif') no-repeat 89% 42%,-moz-linear-gradient(top,#ffffff,#f3f3f3);
+		filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f3f3f3', GradientType=0);
+	} 
+	#gnb .gnb_01 ul.depth2 .depth2_01{width:33%; }
+	#gnb .gnb_01 ul.depth2 .depth2_02{width:33%; }
+	#gnb .gnb_01 ul.depth2 .depth2_03{width:34%; } 
+	#gnb .gnb_02 ul.depth2 .depth2_01{width:33%; }
+	#gnb .gnb_02 ul.depth2 .depth2_02{width:33%; }
+	#gnb .gnb_02 ul.depth2 .depth2_03{width:34%; } 
+	#gnb .gnb_03 ul.depth2 .depth2_01{width:50%; }
+	#gnb .gnb_03 ul.depth2 .depth2_02{width:50%; }
+	#gnb .gnb_04 ul.depth2 .depth2_01{width:25%; }
+	#gnb .gnb_04 ul.depth2 .depth2_02{width:25%; }
+	#gnb .gnb_04 ul.depth2 .depth2_03{width:25%; } 
+	#gnb .gnb_04 ul.depth2 .depth2_04{width:25%; } 
+
+
+	#gnb li.gnb_01 li.focus ul.depth3 {display:block; clear:both}
+	#gnb li.gnb_01 li ul.depth3 {display:none;position:absolute;left:0;top:35px;width:100%; }
+	#gnb li.gnb_01 li ul.depth3 li {width:33.5%;  }
+	#gnb li.gnb_01 li ul.depth3 li.first {width:33%;  }
+	#gnb li.gnb_01 li ul.depth3 li a {display:block; font-size:14px; color:#696868;background:#fafafa;  
+		background:-webkit-gradient(linear,left top, left bottom,color-stop(0,#ffffff),color-stop(0,#f3f3f3));
+		background:-moz-linear-gradient(top,#ffffff,#f3f3f3);vertical-align:middle; text-align:center; 
+		filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f3f3f3', GradientType=0);
+	}
+	#gnb li.gnb_01 li ul.depth3 li.active a {color:#fff;background:#666666;}
+	#gnb li.gnb_02 li.focus ul.depth3 {display:block;}
+	#gnb li.gnb_02 li ul.depth3 {display:none;position:absolute;left:0;top:120px;width:100%; }
+	#gnb li.gnb_02 li ul.depth3 li {width:33%; }
+	#gnb li.gnb_02 li ul.depth3 li.first {width:34%;}
+	#gnb li.gnb_02 li ul.depth3 li a {display:block;height:12px;padding:13px 0;font-size:12px;color:#696868;text-align:center;background:#fafafa;
+		background:-webkit-gradient(linear,left top, left bottom,color-stop(0,#ffffff),color-stop(1,#f3f3f3));
+		background:-moz-linear-gradient(top,#ffffff,#f3f3f3);
+		filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f3f3f3', GradientType=0);
+	}
+	#gnb li.gnb_02 li ul.depth3 li.active a {color:#fff;background:#3a709c;}
+	#gnb li.gnb_03 li.focus ul.depth3 {display:block;}
+	#gnb li.gnb_03 li ul.depth3 {display:none;position:absolute;left:0;top:120px;width:100%;border-top:2px solid #888888;}
+	#gnb li.gnb_03 li ul.depth3 li {width:33%;}
+	#gnb li.gnb_03 li ul.depth3 li.first {width:34%;}
+	#gnb li.gnb_03 li ul.depth3 li a {display:block;height:12px; vertical-align:middle; font-size:12px;color:#696868;text-align:center;background:#fafafa;
+		background:-webkit-gradient(linear,left top, left bottom,color-stop(0,#ffffff),color-stop(1,#f3f3f3));
+		background:-moz-linear-gradient(top,#ffffff,#f3f3f3);
+		filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f3f3f3', GradientType=0);
+	}
+	#gnb li.gnb_03 li ul.depth3 li.active a {color:#fff;background:#3a709c !important;}
+	#gnb li ul.depth2 li ul.depth3 li ul.depth4 {display:none;}
+
+	#left_area .onair {display:none;}
+	#left_area .info {display:none;}
+	#left_area .sns {display:none;}
+
+	.depth2_05 {display:none;}
+	.depth2_06 {display:none;}
+
+
+ #SubGnb{width:100%; height:30px; /*background:url("../image/sub_cate_bg.png") repeat-x;*/ position:relative; }
+ #SubGnb ul{  text-align:center;  height:58px;  }
+ #SubGnb ul .sub_cl{width:35%;display:inline; width:height:40px; font-size:10pt; font-weight:bold; }
+ #SubGnb ul .sub_cl a{color:#727070; width:35%; padding:10px; border-right:1px solid red;  }
+
+/* subMenu */
+ #SubFootMenu{width:100%; height:70px; background-color:#878787;  text-align:center; position:relative; }
+ #SubFootMenu ul{width:100%; height:70px; position:absolute; top:8px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+ #SubFootMenu ul .foot_cl{ display:inline; height:57px; padding:8px 8px 0 8px; }
+
+.sub_CurrentPage{width:100%; }
+.td_subsunstyle{color:#7f8080; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; }
+
+
+/*교회소식*/
+#article .sub_bultit{  margin-bottom:10px;  }
+#article .b_stit{ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;font-size:20pt; color:#3d3c3c;  }
+#article .news_Tdate{vertical-align:middle; font-size:11pt}
+#article .m_tnews{margin-top:10px; margin-bottom:10px;  } 
+#article .m_tnews .list_news{padding:10px 0 8px 0;}
+.news_date{font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic'; color:#057cc6;height:20px; font-size:10pt; }
+.news_title{font-size:12pt;}
+.m_tnews a:hover{ text-decoration:underline;}
+.m_tnews a:link{color:#5d5d5d;}
+.m_tnews a:visited{color:#5d5d5d;} 
+
+.m_jubo{padding-top:10px; padding-bottom:10px;  border-bottom:1px solid #979797;}  
+.m_jubo table .mjubo_line{border:1px solid #ccc;}
+.m_jubo table .mjubo_day{font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; vertical-align:middle; height:25px;font-size:9pt; background:url("/image/icon_biblelist.gif") no-repeat left 2px; padding-left:10px;}
+/* 교회안내 */ 
+
+/* 비전 */
+#article .ex_tit{padding:4px;}
+#article .vision_visual{width:100%; /* background:url("/image/guide_bg.png") no-repeat;I*/ }
+#article .vision_visual p img{width:100%;}
+.cont_vision{font-size:12px; color:#404040;}
+.cont_vision .subject01{margin:0 auto; text-align:justify;line-height:170%;color:#93a120; margin-bottom:30px;padding:10px; background-color:#fbfbfb; border:1px solid #deb927;} 
+.cont_vision .subject01 .titimg{float:left; padding:15px;}
+.cont_vision .subject02{margin:0 auto; text-align:justify;line-height:170%; color:#2b8cd7; margin-bottom:30px;padding:10px; background-color:#fbfbfb; border:1px solid #3393de;} 
+.cont_vision .subject02 .titimg{float:left; padding:15px;}
+.cont_vision .subject03{margin:0 auto; text-align:justify;line-height:170%; color:#6145b6; margin-bottom:30px;padding:10px; background-color:#fbfbfb; border:1px solid #9d86e3;} 
+.cont_vision .subject03 .titimg{float:left; padding:15px;}
+#article .down_btn{text-align:right }
+#article .down_btn li{display:inline; } 
+#article .cont_vision{color:#343434; margin:0 auto;}
+#article .cont_vision ul { margin:0 auto;}
+ 
+
+/* 예배시간 */ 
+#article .dTime{border:1px solid #ccc;}
+#article .dTime .line_right{border-right:1px solid #ccc;}
+#article .dTime .line_left{border-left:1px solid #ccc;}
+#article .dTime .line_bottom{border-bottom:1px solid #ccc;}
+#article .dTime .line_top{border-top:1px solid #ccc;}
+
+#article .dTime tr td{border:1px solid #ccc;border:1px solid red;} 
+.worship_tb{width:100%;border-top:1px solid #dadada; }
+.worship_tb .middle_td{height:30px; vertical-align:middle; text-align:center;border-right:1px solid #c9c8c8;border-bottom:1px solid #c9c8c8;background:url('../image/tab_bg.gif') repeat-x;}
+.worship_tb .mid_left{border-left:1px solid #c9c8c8;}
+.worship_tb .middle_td02{height:30px;vertical-align:middle; text-align:center;border-right:1px solid #c9c8c8;border-bottom:1px solid #c9c8c8;background:url('../image/tab_bg.gif') repeat-x;}
+.worship_tb02{vertical-align:middle; text-align:center; }
+.worship_tb02 img{padding-top:5px;}
+ 
+.sermon_tb .Sermon_infoTab2{border-top:2px solid #488ce1;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;border-bottom:1px solid #ccc;background-color:#f9f9f9; 
+	height:26px; vertical-align:middle;}
+.sermon_tb .Sermon_infoTitle{ padding-left:5px; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;  }
+.sermon_tb .Sermon_infoTitle h2{color:#3d3d3d; font-size:14px;  padding:0 0 0px 17px; line-height:150%; background:url("/image/icon_bible.gif") no-repeat left 3px; font-weight:normal;}
+.sermon_tb .Sermon_infoTitle span{font-size:12px; color:#636363; }
+.sermon_tb .Sermon_infoTitle .pastor{ padding-bottom:6px;}
+.sermon_tb .Sermon_infoTab3{vertical-align:middle;  }
+
+.worship_tb a:hover{ text-decoration:underline;}
+.worship_tb a:link{color:#5d5d5d;}
+.worship_tb a:visited{color:#5d5d5d;} 
+/* 예배시간안내 */
+.inner{margin-bottom:40px;} 
+.cont_worship {padding-top:-20px; }
+.cont_worship .tab {width:100%;margin-bottom:30px;}
+.cont_worship .tab li {width:20%;}
+.worship_information {overflow:hidden;width:100%;margin-top:5px;}
+.worship_information h4 {float:left;margin-left:5px; font-size:27px;line-height:120%; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; }
+.worship_information .k_place {float:left;margin-left:8px;font-size:20px;color:#626262;font-weight:bold;margin-top:9px;line-height:120%;letter-spacing:-0.05em;}
+.worship_information .place {float:right;margin:19px 5px 0 0;}
+.tbl_worship {width:100%;margin-top:5px; }
+.tbl_worship td {padding:7px 0 7px 20px;border-bottom:1px solid #e3e3e3;font-size:14px;color:#303030;line-height:160%;letter-spacing:-0.05em;}
+.tbl_worship td br {letter-spacing:normal;}
+.tbl_worship td .comm {font-size:13px;color:#3a709c;line-height:160%;letter-spacing:-0.05em;}
+.tbl_worship .first_child th, .tbl_worship .first_child td {border-top:3px solid #063873;}
+.tbl_worship th {border-bottom:1px solid #e3e3e3;font-size:14px;color:#303030;letter-spacing:-0.5px;}
+.tbl_worship .w_category {width:25%;border-bottom:1px solid #e3e3e3;padding-left:15px;background:#ececec;font-size:14px;color:#303030;letter-spacing:-0.5px;text-align:left;}
+.tbl_worship .w_category_2 {width:25%;border-bottom:1px solid #e3e3e3;padding-left:15px;background:#9BCCD5;font-size:14px;color:#303030;letter-spacing:-0.5px;text-align:left;}
+.tbl_worship th.time {padding-left:0;background:#ececec;font-weight:bold;text-align:center;}
+.tbl_worship th.time02 {padding-left:20px;font-weight:bold;text-align:left;}
+.tbl_worship th.category {padding-left:17px;background:#ececec;text-align:left;}
+.tbl_worship th.category .term {margin-left:3px;padding-left:10px;background:url('/image/bullet_bar02.gif') no-repeat left 2px;font-size:12px;font-weight:normal;}
+.tbl_worship th.sub_category {padding-left:17px;background:#ececec;font-size:12px;font-weight:normal;text-align:left;}
+.tbl_worship td.place {width:130px;padding-left:8px;background:#ececec;text-align:left;}
+.tbl_worship td.place img {width:10px;}
+.tbl_worship td.guide {padding-left:5px;}
+.tbl_worship td .stit {padding-left:22px;background:url('/image/bullet_arrow02.gif') no-repeat left 4px;}
+.tbl_worship td .txt-info {margin-left:23px;font-size:12px;}
+.tbl_worship td .respon {margin-right:13px;padding-right:19px;background:url('/images/bullet_bar02.gif') no-repeat right 5px;}
+.tbl_worship td .respon02 {display:inline-block;width:123px;margin-right:13px;padding-right:19px;background:url('/image/bullet_bar02.gif') no-repeat right 5px;}
+.tbl_worship td .assem {margin-right:8px;padding-right:15px;background:url('/images/bullet/bullet_bar02.gif') no-repeat right 5px;}
+.tbl_worship td .time_info {margin-right:40px;}
+.tbl_worship td .txt_newfam {padding-left:19px;background:url('/image/bullet_arrow02.gif') no-repeat left 4px;font-size:12px;}
+.tbl_worship th.line, .tbl_worship td.line {border-right:1px solid #e3e3e3;}
+.tbl_worship td.youth_respon {font-size:12px;}
+.tbl_worship td.youth_respon em {font-size:14px;font-weight:bold;}
+.tbl_worship td.sfont {font-size:12px;}
+.tbl_worship td .txt_eng_info {padding-left:65px;text-indent:-65px;}
+.tbl_worship th.color01{background:#ececec;}
+ /* worship */
+	.cont_worship {padding-top:0;}
+	.worship_information {margin-top:0;}
+	.worship_information.mFirst{border-top:3px solid #7fbc21;}
+	.worship_information {display:block;overflow:hidden;height:44px;font-size:14px;letter-spacing:-0.1em;line-height:1.5em;border-bottom:1px solid #b5b5b5;background:url('/image/arrow_close.gif') #fff no-repeat 94% 13px;}
+	.worship_information h4 {display:block;min-height:14px;padding:5px 1px 16px 24px;font-weight:bold;font-size:14px;color:#434343;text-align:center;line-height:1em;}
+	.worship_information .k_place {float:left;font-size:12px;color:#626262;margin-top:15px;letter-spacing:-0.02em}
+	.worship_information span.place {display:none;}
+	.worship_information.open {border-bottom:0 none;background:url('/image/arrow_open.gif') #efefef no-repeat 94% 15px;}
+	table.tbl_worship {margin-top:0;}
+	table.tbl_worship .first_child th, .tbl_worship .first_child td {border-top:1px solid #b5b5b5;}
+	table.tbl_worship th, table.tbl_worship td {padding:7px 5px !important;font-size:12px;letter-spacing:-0.1em;}
+	table.tbl_worship td .assem {margin-right:0;padding-right:0;background:none;}
+	table.tbl_worship td .respon02 {margin-right:0;padding-right:0;background:none;}
+	table.tbl_worship th.category .term {display:block;margin-left:0;padding-left:0;background:none;}
+	table.tbl_worship td .respon {display:block;background:none;margin-right:0;padding-right:0;}
+	table.tbl_worship td .stit {display:inline-block;min-height:17px;}
+
+/* 예배시간 끝 */
+
+#article .cont_master{color:#343434;}
+#article .master_ex{padding:10px; line-height:160%; letter-spacing:-0.1em;}
+
+/*오시는길*/
+#article .map_area{text-align:center; padding:5px;  }
+
+/*성경*/
+#bible_article01{width:100%;  text-align:center; padding:0 0 10px 0;   }
+		.bfind_bg{width:100%; height:37px;   } 
+		.bfind_bg table .select_bg {width:20%;height:30px;/*-webkit-border-radius:3px; -webkit-appearance:none; border:1px solid #e0e0e0; width:20%;text-align:center;*/}
+		.bfind_bg table .find_value{-webkit-border-radius:5px;-webkit-appearance:none;width:60%; height:30px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;} 
+		.bfind_bg table .find_btn{width:15%;}
+		.bfind_img{margin-top:10px; }
+		.bfind_result{font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; border:1px solid #c4c4c4; background-color:#f5f5f5;padding:5px;}
+		.bfind_result span{font-size:13pt; font-weight:bold;}
+		.label01{font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; } 
+		.label02{font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+#article .bview_tb{width:100%; height:90px; font-size:16px;  letter-spacing:2.0;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+#article .bview_tb td{text-align:center; vertical-align:middle; padding:2px;}
+#article .bview_tb img{vertical-align:middle;} 
+#article .bview_tb .bible_contect{font-size:10pt;  }
+#article .bview_tb .bbook_select {width:100%; height:28px; }
+#article .bview_tb .bjul_select{width:100%;height:28px;} 
+
+#bible_article01 table{margin:0 auto; width:100%; }
+#bible_article01 table img{vertical-align:middle;}  
+#bible_article01 select{padding:5px;font-size:12px;}
+#bible_article01 input{  padding:5px; font-size:12px;}
+
+.bible_search_box{vertical-align:middle;  } 
+
+.bible_tb{padding:10px 5px 10px 5px; border-bottom:1px dotted #ccc; }
+.bible_tb .bilbe_jul{ font-size:14px; color:#2c8fb9; vertical-align:middle; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; }
+.bible_tb .bilbe_jul img{vertical-align:middle;}
+.bible_tb .bilbe_bdesc{ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;vertical-align:middle;line-height:150%;color:#222222; border-bottom:1px solid #edecec; 
+padding-left:12px;padding-bottom:5px;background:url("/image/icon_biblelist.gif") no-repeat left 8px;  }
+
+.bible_tb .bilbe_jul1{ font-size:14px; color:#a4a4a4; vertical-align:middle; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ; }
+.bible_tb .bilbe_bdesc1{ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;vertical-align:middle;line-height:150%;color:#a4a4a4; border-bottom:1px solid #edecec; padding-left:12px;padding-bottom:5px;background:url("/image/icon_biblelist.gif") no-repeat left 8px;  }
+
+
+ #bible_article02{width:100%;  text-align:center; padding:10px 10px 10px 10px;  }
+ #bible_article02 table{ width:100%; height:47px;  }
+ #bible_article02 table img{vertical-align:middle;}
+
+.bible_find {width:100% height:53px; border:0; padding:0; font-size:14px; color:#703992;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;} 
+.bible_find td{  line-height:150%;} 
+.bible_find .result_bg{background:url("/image/result_boxbg.png")  repeat-x left 0; }
+
+ #bible_article02 .bible_tb{width:100%;}
+  #bible_article02 .bible_tb td{padding-top:7px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+
+ /*주보*/
+#jubo_sun{position:relative; width:100%;   }
+#jubo_sun:after { clear: both; display: block; content: "";} 
+#jubo_sun .sunday01{float:left; width:30%; }
+#jubo_sun .sunday02{float:left;width:30%; }
+#jubo_sun .sunday03{float:left; width:30%;}
+#jubo_sun .sunday04{float:left; width:10%;}
+
+
+ /*내가추가*/
+ .lbl_chkpoint { color:#2082f8}
+ .lbl_odap {  color:Red ; font-weight:bold; font-style:italic}
+.font_schedule_stdby { color:#ff6a6a; font-size: 12px; letter-spacing: 0px; line-height:14px; font-family: "굴림";} 
+.font_schedule_black { color:#000000; font-size: 15px; letter-spacing: 0px; line-height:14px; font-family: "굴림";} 
+.font_schedule_black_bold { color:#000000; font-size: 18px; letter-spacing: 0px; line-height:14px; font-family: "굴림"; font-weight: bold;}
+.font13_black { color:#e8e8e8; font-size: 13px; letter-spacing: 0px; line-height:17px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+.font15_black { color:#000000; font-size: 15px; letter-spacing: 0px; line-height:14px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+.font20_black { color:#000000; font-size: 20px; letter-spacing: 0px; line-height:14px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+.input_font12 {font-size:12px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;margin:0px;padding: 5px; }
+.home_footer { color:#7d7d7d; font-size: 12px; letter-spacing: 0px; line-height:14px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;}
+.input-style{font-size:15px;background-color:#f0f0f0;box-shadow:none;border:none;padding: 5px;}
+.input-new{font-size:15px;background-color:#f0f0f0;box-shadow:none;border:none;}
+.home_login_btn {font-size:18px;font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;margin:0px;padding: 0px; font-weight:bold; background-color:#519bde;  color:White}
+.btn_login
+{
+ font-weight:bold;
+ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;
+ display:inline-block;
+ border:0px solid #fff;
+ color:#fff !important;
+ background:#519bde;
+ padding:5px 5px 2px 5px;
+ border-radius:5px;
+ font-size: 15pt;
+ text-decoration:none;
+ cursor:pointer
+}
+
+.btn_save
+{
+ font-weight:bold;
+ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;
+ display:inline-block;
+ border:0px solid #fff;
+ color:#fff !important;
+ background:#2dc3a9;
+ padding:5px 5px 2px 5px;
+ border-radius:5px;
+ font-size: 15pt;
+ text-decoration:none;
+ cursor:pointer
+}
+.btn_reserve
+{ 
+ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;
+ display:inline-block;
+ border:0px solid #fff;
+ color:#000 !important;
+ background:#e3e3e3;
+ padding:5px 5px 2px 5px;
+ border-radius:5px;
+ font-size: 15pt;
+ text-decoration:none;
+ cursor:pointer;
+ height:50px
+}
+
+.btn_standby
+{ 
+ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;
+ display:inline-block;
+ border:0px solid #fff;
+ color:#000 !important;
+ background:#ffddfb;
+ padding:5px 5px 2px 5px;
+ border-radius:5px;
+ font-size: 15pt;
+ text-decoration:none;
+ cursor:pointer;
+ height:50px
+}
+
+
+.btn_save_small
+{
+ font-weight:bold;
+ font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic' ;
+ display:inline-block;
+ border:0px solid #fff;
+ color:#fff !important;
+ background:#2dc3a9;
+ padding:5px 5px 2px 5px;
+ border-radius:5px;
+ font-size: 12pt;
+ text-decoration:none;
+ cursor:pointer
+}
+

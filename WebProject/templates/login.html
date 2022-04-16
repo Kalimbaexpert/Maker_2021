@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>LIS LOGIN Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{ url_for('static', filename='assets/css/animate.min.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{ url_for('static', filename='style.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{ url_for('static', filename='assets/css/googleapis_font.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{ url_for('static', filename='icons/elegantline/style.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{ url_for('static', filename='assets/css/font-awesome.min.css')}}" type='text/css' media='all' />
+<link rel='stylesheet' href="{{ url_for('static', filename='assets/css/flexslider.css')}}" type='text/css' media='all'/>
+</head>
+<body class="frontpage">
+<div class="page-loader">
+	<img src="{{ url_for('static', filename='assets/img/loader.gif')}}" alt="loader">
+</div>
+
+<!-- Header
+================================================== -->
+<header id="header">
+<div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right">
+	<nav class="navbar navbar-default redq">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{ url_for('hello')}}">
+			<img src="{{ url_for('static', filename='images/LIS.png')}}" alt="logo">
+			</a>
+		</div>
+		
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+	</nav>
+</div>
+</header>	
+
+<!-- INTRO
+================================================== -->
+<section id="home" style="padding:160px 0;background-image: url(https://unsplash.it/1324/683?random=0); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment:fixed;">
+	<div class="container">
+		<div class="textwidget">
+			<h1 class="toptitle">로그인<br/><i class="fa fa-star roundicon"></i>
+			</h1>								
+			<div class="contactstyle topform">										
+				<form method="get" action= "{{url_for('logintry')}}" id="topcontactform">
+					<div class="form">
+						<input type="text" id="id" name="id" placeholder="ID *">
+						<input type="password" id="password" name="password" placeholder="PASSWORD *">
+						<input type="submit" id="submit" class="clearfix btn" onclick="location.href='{{ url_for('admin')}}'">로그인</button>
+					</div>
+				</form>
+				<div class="done">
+					
+				</div>
+			</div>								
+		</div>
+		</div>
+</section>	
+	
+<!-- FOOTER
+================================================== -->
+<footer id="footer" class="footer2">
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<small>
+					&copy; <a href="{{ url_for('admin')}}">
+							  일단 여기 누르면 로그인 다음 페이지-!
+							</a>
+					</small>
+				</div>
+				<div class="col-md-6 text-right">
+					<div class="footer-menu">
+						<ul id="menu-footer-links" class="menu">
+							<li><a href="#"><i class="fa fa-facebook"></i> Like us on Facebook</a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i> Follow us on Twitter</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- SCRIPTS
+================================================== -->
+<script src="{{ url_for('static', filename='assets/js/jquery.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/plugins.js')}}"></script>
+<script src="{{ url_for('static', filename='contact/topvalidate.js')}}"></script>
+<script src="{{ url_for('static', filename='contact/bottomvalidate.js')}}"></script>
+
+</body>
+</html>
